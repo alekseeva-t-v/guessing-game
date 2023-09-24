@@ -1,47 +1,31 @@
-### Guessing game
+# **Отгадай число**  |  **Guessing game**
 
----
-⚠️ DO NOT SUBMIT PRS WITH SOLUTIONS TO THIS REPO ⚠️
+![Guessing game](./public/game.jpg)
+## Описание Задачи
 
-### Description
+Ваша задача — реализовать класс `GuessingGame`
 
-Your task is to implement `GuessingGame` class
+### Методы:
 
-#### Methods:
+#### `setRange(min, max)`
+этот метод принимает минимальное и максимальное значение диапазона чисел для угадывания
 
-##### `setRange(min, max)`
-this method accepts min and max value of range of number to guess
+#### `guess()`
+этот метод возвращает предполагаемый вариант решения (вы делаете предположение на основе диапазона и предыдущих предположений)
 
-##### `guess()`
-this method returns solution candidate (you make an assumption based on range and previous assumptions)
+#### `lower()`
+этот метод вызывается, если предыдущий вызов `guess()` вернул число, большее, чем ответ
 
-##### `lower()`
-this method is called if prev call of `guess()` returned number which is greater than answer
+#### `greater()`
+этот метод вызывается, если предыдущий вызов `guess()` вернул число, которое меньше ответа
 
-##### `greater()`
-this method is called if prev call of `guess()` returned number which is lower than answer
+Реализация должна использовать [алгоритм двоичного поиска](https://en.wikipedia.org/wiki/Binary_search_algorithm) для прохождения всех тестов.
 
-Your implementation should use [binary search algorithm](https://en.wikipedia.org/wiki/Binary_search_algorithm) under the hood to pass all tests
-
-### Prerequisites
-1. Install [Node.js](https://nodejs.org/en/download/)   
-2. Fork this repository: https://github.com/rolling-scopes-school/guessing-game/
-3. Clone your newly created repo: https://github.com/<%your_github_username%>/guessing-game/  
-4. Go to folder `guessing-game`  
-5. To install all dependencies use [`npm install`](https://docs.npmjs.com/cli/install)  
-6. Run `npm test` in command line or you can run tests in browser with `npm start` and open http://localhost:8080
-7. You will see the number of passing and failing tests. 100% of passing tests is equal to 100p in score  
-
----
-
-### Submit to [rs app](https://app.rs.school)
-1. Open [rs app](https://app.rs.school) and login
-2. Open `RS APP` and click `Auto Test`
-3. Select your task (guessing-game)
-4. Press the submit button and enjoy
-
-### Notes
-1. We recommend you to use nodejs of version 14 or lower. If you using any of features that does not supported by node v10, score won't be submitted.
-2. Please be sure that each of your test in limit of 30sec.
-
-© [lesnitsky](https://github.com/lesnitsky)
+## Тестирование решения
+1. Установите [Node.js](https://nodejs.org/en/download/)
+2. Сделайте форк этого репозитория
+3. Склонируйте себе этот репозиторий: https://github.com/<%your_github_username%>/guessing-game/
+4. Перейдите в папку `guessing-game`
+5. Вбейте в командную строку `npm install` для установки зависимостей
+6. Выполните `npm test` в командной строке.
+7. Вы увидите число ожидающих (pending), проходящих и падающих тестов. 100% проходящие тесты соответствуют максимальному баллу за задание.
